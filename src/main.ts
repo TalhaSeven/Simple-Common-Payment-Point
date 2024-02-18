@@ -25,8 +25,8 @@ app.post('/validation', (req, res) => {
     if (cardNumber !== '0000111122223333') {
         validationList.push({cardNumber: "Please enter valid card number"})
     }
-    if (expMonthYear.length !== 4) {
-        validationList.push({expMonthYear: "Please enter the expiration date (MMYY)"})
+    if (expMonthYear.length !== 5) {
+        validationList.push({expMonthYear: "Please enter the expiration date (MM/YY)"})
     }
     if (cvCode.length !== 3) {
         validationList.push({cvCode: "Please enter 3 digit cvv number"})
